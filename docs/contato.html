@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato conosco. Tire suas dúvidas sobre alimentação saudável e nutrição com o nutricionista João da Silva.">
+    <meta name="keywords" content="contato, nutricionista, dúvidas, alimentação saudável, João da Silva">
+    <meta name="author" content="João da Silva - Nutricionista">
+    <title>Contato - Alimentação Saudável | João da Silva Nutricionista</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">🥗 Alimentação Saudável</a>
+                <nav>
+                    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+                    <ul id="nav-menu">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="index.html#artigos">Artigos</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="politica-privacidade.html">Privacidade</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Início</a> > Contato
+            </div>
+
+            <section class="section">
+                <h1>Entre em Contato</h1>
+                <p>Tem alguma dúvida sobre alimentação saudável? Gostaria de sugerir um tema para nossos artigos? Ou talvez queira compartilhar sua experiência com uma vida mais saudável? Estamos aqui para ajudar!</p>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin: 3rem 0;">
+                    <!-- Formulário de Contato -->
+                    <div>
+                        <h2>Envie sua Mensagem</h2>
+                        <form id="contact-form" onsubmit="handleSubmit(event)">
+                            <div class="form-group">
+                                <label for="nome">Nome Completo *</label>
+                                <input type="text" id="nome" name="nome" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">E-mail *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="assunto">Assunto</label>
+                                <select id="assunto" name="assunto" style="width: 100%; padding: 12px; border: 2px solid var(--medium-gray); border-radius: 5px; font-size: 1rem;">
+                                    <option value="">Selecione um assunto</option>
+                                    <option value="duvida-nutricional">Dúvida Nutricional</option>
+                                    <option value="sugestao-artigo">Sugestão de Artigo</option>
+                                    <option value="feedback">Feedback sobre o Site</option>
+                                    <option value="parceria">Proposta de Parceria</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="mensagem">Mensagem *</label>
+                                <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem aqui..." required></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" id="newsletter" name="newsletter" style="margin-right: 8px;">
+                                    Quero receber dicas de alimentação saudável por e-mail
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn">Enviar Mensagem</button>
+                        </form>
+
+                        <div id="form-message" style="margin-top: 1rem; padding: 1rem; border-radius: 5px; display: none;"></div>
+                    </div>
+
+                    <!-- Informações de Contato -->
+                    <div>
+                        <h2>Outras Formas de Contato</h2>
+                        
+                        <div style="background-color: var(--light-gray); padding: 2rem; border-radius: 10px; margin-bottom: 2rem;">
+                            <h3>📧 E-mail Direto</h3>
+                            <p><strong>contato@alimentacaosaudavel.com</strong></p>
+                            <p>Resposta em até 48 horas úteis</p>
+                        </div>
+
+                        <div style="background-color: var(--light-gray); padding: 2rem; border-radius: 10px; margin-bottom: 2rem;">
+                            <h3>⏰ Horário de Atendimento</h3>
+                            <p><strong>Segunda a Sexta:</strong> 8h às 18h</p>
+                            <p><strong>Sábado:</strong> 8h às 12h</p>
+                            <p><strong>Domingo:</strong> Não atendemos</p>
+                        </div>
+
+                        <div style="background-color: var(--light-gray); padding: 2rem; border-radius: 10px;">
+                            <h3>💡 Dicas para um Contato Eficiente</h3>
+                            <ul>
+                                <li>Seja específico em sua dúvida ou sugestão</li>
+                                <li>Se for uma dúvida nutricional, forneça contexto (idade, objetivos, etc.)</li>
+                                <li>Para sugestões de artigos, explique por que seria útil</li>
+                                <li>Lembre-se: não fazemos consultas por e-mail</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seção de Perguntas Frequentes -->
+                <div class="highlight">
+                    <h2>Perguntas Frequentes</h2>
+                    
+                    <div style="margin: 2rem 0;">
+                        <h3>❓ Vocês fazem consultas online?</h3>
+                        <p>Este site tem caráter educativo e informativo. Para consultas nutricionais personalizadas, recomendamos buscar um nutricionista em sua região através do site do Conselho Federal de Nutricionistas (CFN).</p>
+                    </div>
+
+                    <div style="margin: 2rem 0;">
+                        <h3>❓ Posso usar as informações do site para tratar problemas de saúde?</h3>
+                        <p>Não. Nosso conteúdo é educativo e não substitui o acompanhamento médico ou nutricional. Sempre consulte um profissional de saúde antes de fazer mudanças significativas em sua dieta.</p>
+                    </div>
+
+                    <div style="margin: 2rem 0;">
+                        <h3>❓ Como posso sugerir temas para novos artigos?</h3>
+                        <p>Use o formulário acima selecionando "Sugestão de Artigo" no campo assunto. Explique qual tema gostaria de ver abordado e por que seria útil para você e outros leitores.</p>
+                    </div>
+
+                    <div style="margin: 2rem 0;">
+                        <h3>❓ Vocês respondem todas as mensagens?</h3>
+                        <p>Sim! Respondemos todas as mensagens em até 48 horas úteis. Se não receber resposta neste prazo, verifique sua caixa de spam ou entre em contato novamente.</p>
+                    </div>
+
+                    <div style="margin: 2rem 0;">
+                        <h3>❓ Posso republicar o conteúdo do site?</h3>
+                        <p>Nosso conteúdo é protegido por direitos autorais. Para republicação ou uso comercial, entre em contato conosco para discutir as possibilidades e condições.</p>
+                    </div>
+                </div>
+
+                <!-- Aviso Importante -->
+                <div style="background-color: #FFF3CD; border: 1px solid #FFEAA7; padding: 1.5rem; border-radius: 5px; margin: 2rem 0;">
+                    <h3 style="color: #856404; margin-bottom: 1rem;">⚠️ Aviso Importante</h3>
+                    <p style="color: #856404; margin-bottom: 0;">
+                        <strong>Este site não oferece consultas nutricionais.</strong> As informações aqui contidas têm caráter educativo e não substituem o acompanhamento profissional. Para orientações personalizadas sobre sua alimentação e saúde, procure um nutricionista ou médico qualificado.
+                    </p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Alimentação Saudável. Todos os direitos reservados.</p>
+                <ul class="footer-links">
+                    <li><a href="politica-privacidade.html">Política de Privacidade</a></li>
+                    <li><a href="termos-uso.html">Termos de Uso</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('active');
+        }
+
+        // Fechar menu ao clicar em um link (mobile)
+        document.querySelectorAll('#nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('nav-menu').classList.remove('active');
+            });
+        });
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const formMessage = document.getElementById('form-message');
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const mensagem = document.getElementById('mensagem').value;
+            
+            // Validação básica
+            if (!nome || !email || !mensagem) {
+                showMessage('Por favor, preencha todos os campos obrigatórios.', 'error');
+                return;
+            }
+            
+            // Simular envio (em um site real, isso seria enviado para um servidor)
+            showMessage('Obrigado pela sua mensagem! Entraremos em contato em até 48 horas úteis.', 'success');
+            
+            // Limpar formulário
+            document.getElementById('contact-form').reset();
+        }
+        
+        function showMessage(message, type) {
+            const formMessage = document.getElementById('form-message');
+            formMessage.textContent = message;
+            formMessage.style.display = 'block';
+            
+            if (type === 'success') {
+                formMessage.style.backgroundColor = '#D4EDDA';
+                formMessage.style.color = '#155724';
+                formMessage.style.border = '1px solid #C3E6CB';
+            } else {
+                formMessage.style.backgroundColor = '#F8D7DA';
+                formMessage.style.color = '#721C24';
+                formMessage.style.border = '1px solid #F5C6CB';
+            }
+            
+            // Esconder mensagem após 5 segundos
+            setTimeout(() => {
+                formMessage.style.display = 'none';
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
+
